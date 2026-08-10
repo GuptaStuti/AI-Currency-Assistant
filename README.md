@@ -28,7 +28,7 @@ This project is **Version 1 – Learning Version**, created to gain hands-on exp
 
 The application follows a modular architecture separating the UI, agent workflow, tools, configuration, and utilities.
 
-```text
+
                          User
                            │
                            ▼
@@ -72,8 +72,38 @@ The application follows a modular architecture separating the UI, agent workflow
                    User
 
 
-## **Tech Stack**
--- **Python**	            Application development
+##🧠 **LangGraph Workflow**
+
+LangGraph is used to orchestrate the interaction between the LLM and the available tools.
+
+```text
+User Input
+    │
+    ▼
+Agent / LLM
+    │
+    ├── No tool required ──► Final Response
+    │
+    └── Tool required
+             │
+             ▼
+          ToolNode
+             │
+             ▼
+        Execute Tool
+             │
+             ▼
+       Return Tool Result
+             │
+             ▼
+          Agent / LLM
+             │
+             ▼
+       Final Response
+
+
+## 🛠️ Tech Stack
+-- **Python**	            Application development\br
 -- **LangChain**	        LLM and tool integration
 -- **LangGraph**	        Agent workflow orchestration
 --**Hugging Face**	      LLM provider
@@ -81,3 +111,12 @@ The application follows a modular architecture separating the UI, agent workflow
 -- **Exchange Rate API**	Exchange-rate data
 -- **Requests**	          API communication
 -- **python-dotenv**	    Environment variable management
+
+
+⚙️ Setup
+1. Clone the repository
+git clone https://github.com/<your-username>/ai-currency-assistant.git
+
+Navigate to the project:
+
+cd ai-currency-assistant
