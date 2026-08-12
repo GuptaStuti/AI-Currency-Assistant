@@ -1,0 +1,154 @@
+LangGraph Flow
+User
+
+↓
+
+Assistant Node
+
+↓
+
+Need Tool?
+
+↓
+
+No
+
+↓
+
+Final Answer
+------------------------------------
+OR
+------------------------------------
+
+User
+
+↓
+
+Assistant
+
+↓
+
+Tool Call
+
+↓
+
+ToolNode
+
+↓
+
+Currency Tool
+
+↓
+
+Assistant
+
+↓
+
+Final Answer
+
+--------------------------------
+Streamlit Flow
+User Input
+
+↓
+
+graph.invoke()
+
+↓
+
+Assistant
+
+↓
+
+Display Response
+
+↓
+
+Save Conversation
+
+--------------------------------------------
+USER JOURNEY
+User
+
+↓
+
+Types
+
+↓
+
+Convert 1000 AED to INR
+
+↓
+
+LLM
+
+↓
+
+Needs Tool?
+
+↓
+
+Yes
+
+↓
+
+convert_currency()
+
+↓
+
+Exchange Rate API
+
+↓
+
+Returns Result
+
+↓
+
+LLM Generates Final Response
+
+↓
+
+Streamlit Displays Result
+
+------------------------------------------
+
+-- What You Learned?
+    LangChain
+        -Chat Models
+        -Tool Calling
+        -@tool
+        -bind_tools()
+        -HumanMessage
+        -SystemMessage
+
+    LangGraph
+        -StateGraph
+        -ToolNode
+        -tools_condition
+        -Graph State
+        -MemorySaver
+        -Thread IDs
+        -Conditional Edges
+
+    Streamlit
+        -chat_input
+        -chat_message
+        -Sidebar
+        -Session State
+        -Spinner
+        -Custom CSS
+
+    Python
+        -Modular project structure
+        -Environment variables
+        -Logging
+        -API integration
+        -Caching
+        -Type hints
+
+--------------------------------------
+Interview Summary
+
+If an interviewer asks, "Can you explain your project?", a concise answer could be:
+
+"I built an AI Currency Assistant using LangChain, LangGraph, and Streamlit. The application uses LangGraph's StateGraph to orchestrate an LLM with three tools for live exchange rates, currency conversion, and currency information. I integrated an external Exchange Rate API, implemented conversation memory using MemorySaver with thread IDs for multi-turn interactions, and organized the application into separate modules for the UI, agent, tools, configuration, and utilities. I also added logging, caching, and environment-based configuration to make the project clean and maintainable."
